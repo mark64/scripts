@@ -1,0 +1,7 @@
+#!/bin/sh
+
+AIRPORT_IP=10.0.1.125
+PASSWORD=terni7236
+MOUNT_POINT=/mnt/mark/timecapsule
+DISK_NAME=MAC
+/sbin/mount.cifs //$AIRPORT_IP/$DISK_NAME $MOUNT_POINT -o"pass=$PASSWORD,sec=ntlm"
