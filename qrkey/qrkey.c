@@ -34,11 +34,11 @@ int main (const char **argv, int argc) {
 	if (pid < 0)
 		goto fork_error;
 	
-	else if (pid == 0)
-		return 0;
-		//execlp("gpg", "gpg", "--export", "--armour", "0xF6D1D9B4AA30D5AA", ">", filename, (char *) NULL);
-		//execlp("ssh-keygen", "ssh-keygen", "-q", "-t", type, "-b", bitstring, "-f", filename, (char *) NULL);
-	else {
+	else if (pid == 0) {
+//	return 0;
+//		execlp("gpg", "gpg", "--export", "--armour", "0xF6D1D9B4AA30D5AA", ">", filename, (char *) NULL);
+		execlp("ssh-keygen", "ssh-keygen", "-q", "-t", type, "-b", bitstring, "-f", filename, (char *) NULL);
+	} else {
 		int exit = 0;
 		waitpid(pid, &exit, 0);
 
