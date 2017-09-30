@@ -10,5 +10,5 @@ REPO_NAME=$HOME/html/$1.git
 
 mkdir -p $REPO_NAME
 git init --bare --shared=group $REPO_NAME
-sudo chown mark:www-data $REPO_NAME
+sudo chown mark:www-data -R $REPO_NAME
 
