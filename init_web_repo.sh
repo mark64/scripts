@@ -6,7 +6,7 @@ if [ $# -lt 1 ]; then
 	exit 1
 fi
 
-REPO_NAME=$HOME/html/$1.git
+REPO_NAME=/var/www/html/m/$1.git
 
 mkdir -p $REPO_NAME
 git init --bare --shared=group $REPO_NAME
